@@ -1,14 +1,23 @@
 :root {
     --color-primary: rgb(230, 230, 230);
-    --color-secondary: rgb(63, 63, 63);
-    --color-accent: rgb(224, 0, 73);
+    --color-secondary: rgb(224, 0, 73);
+
+    --color-font-1: rgb(63, 63, 63);
+    --color-font-2: rgb(230, 230, 230);
 
     --padding-inline: 15px;
     --padding-section: 30px;
+
+    --border-1: 2px solid gray;
 }
 
 body {
     overflow-y: scroll;
+}
+
+a {
+    font-weight: bold;
+    color: var(--color-font-2);
 }
 
 .page {
@@ -32,7 +41,8 @@ body {
     padding-top: 5px;
     padding-inline: var(--padding-inline);
 
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
+    color: var(--color-font-2);
 }
 
 .page-header > div {
@@ -50,7 +60,7 @@ body {
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 10px;
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
 }
 
 #page-nav-toggle-checkbox {
@@ -71,8 +81,8 @@ body {
 
 @media (min-width: 768px) {
     .page {
-        border-left: 2px dotted gray;
-        border-right: 2px dotted gray;
+        border-left: var(--border-1);
+        border-right: var(--border-1);
     }
 
     .page-header {
@@ -108,6 +118,6 @@ footer {
     flex-shrink: 0;
     height: 200px;
     padding-inline: var(--padding-inline);
-
-    background-color: var(--color-accent);
+    background-color: var(--color-secondary);
+    color: var(--color-font-2);
 }
