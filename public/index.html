@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>UCLL Meetstations</title>
 </head>
 <body>
@@ -22,7 +23,10 @@
         </header>
         <main>
             <section>                
-                <p>Hier komt de data van een station</p>
+                <h1>Temperatuur van de afgelopen 24 uur</h1>
+                <div class="test">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
             </section>
         </main>
         <footer>
@@ -30,4 +34,5 @@
         </footer>
     </div>
 </body>
+<script src="javascript/chart.js"></script>
 </html>

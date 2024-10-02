@@ -121,3 +121,8 @@ footer {
     background-color: var(--color-secondary);
     color: var(--color-font-2);
 }
+
+.test {
+    width: 50%;
+    height: 50%;
+}
