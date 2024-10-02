@@ -1,0 +1,113 @@
+:root {
+    --color-primary: rgb(230, 230, 230);
+    --color-secondary: rgb(63, 63, 63);
+    --color-accent: rgb(224, 0, 73);
+
+    --padding-inline: 15px;
+    --padding-section: 30px;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1000px;
+    min-width: 200px;
+    min-height: 100svh;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--color-primary);
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    padding-top: 5px;
+    padding-inline: var(--padding-inline);
+
+    background-color: var(--color-accent);
+}
+
+.page-header > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.page-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-accent);
+}
+
+#page-nav-toggle-checkbox {
+    display: none;
+}
+
+.page-nav-toggle-label {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+#page-nav-toggle-checkbox:checked + .page-nav {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .page {
+        border-left: 2px dotted gray;
+        border-right: 2px dotted gray;
+    }
+
+    .page-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .page-nav-toggle-label {
+        display: none;
+    }
+
+    .page-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    min-height: 150px;
+    padding-inline: var(--padding-inline);    
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+footer {
+    flex-shrink: 0;
+    height: 200px;
+    padding-inline: var(--padding-inline);
+
+    background-color: var(--color-accent);
+}

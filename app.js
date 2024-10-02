@@ -5,8 +5,10 @@ const port = 3000;
 
 const router = express.Router();
 
+app.use(express.static('public/static'))
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.listen(port, () => {
