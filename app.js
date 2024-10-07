@@ -32,7 +32,7 @@ const mockData = [
 
 const router = express.Router();
 
-app.use(express.static('public/static'))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
@@ -43,7 +43,7 @@ app.get('/api/temperature', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Server hosting on: http://localhost:${port}`);
 });
 
 module.exports = router;
