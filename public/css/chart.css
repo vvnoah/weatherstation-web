@@ -1,0 +1,28 @@
+.list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 280px;
+    min-height: 200px;
+    box-shadow: 2px 2px 5px 5px gray;
+}
+
+@media (min-width: 400px) {
+    .chart {
+        min-width: 380px;
+        min-height: 300px;
+    }
+}
