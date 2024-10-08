@@ -14,6 +14,7 @@ function render(data) {
 function render_line_chart(chart_elemnt_id, chart_data) {
   const data = {
     datasets: [{
+      label: 'Station',
       data: chart_data
     }]
   };
@@ -22,7 +23,7 @@ function render_line_chart(chart_elemnt_id, chart_data) {
     type: 'line',
     data: data,
     options: {
-      maintainAspectRatio: true
+      maintainAspectRatio: true,
     }
   };
 
