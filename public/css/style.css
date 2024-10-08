@@ -24,7 +24,7 @@ a {
     display: flex;
     flex-direction: column;
 
-    max-width: 1000px;
+    max-width: 1450px;
     min-width: 200px;
     min-height: 100svh;
     margin-left: auto;
@@ -107,6 +107,10 @@ main {
     flex-grow: 1;
 }
 
+table, th, td {
+    border: 1px solid;
+}
+
 section {
     min-height: 150px;
     padding-inline: var(--padding-inline);    
@@ -120,12 +124,9 @@ footer {
     padding-inline: var(--padding-inline);
     background-color: var(--color-secondary);
     color: var(--color-font-2);
-<<<<<<< HEAD:public/static/style.css
 }
 
 .canvas {
     width: 100px;
     height: 100px;
-=======
->>>>>>> 6e0ef637363f5ff3168caeca04bfb2e4cf29afff:public/css/style.css
 }
