@@ -34,6 +34,11 @@ a {
 }
 
 .page-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -43,6 +48,8 @@ a {
 
     background-color: var(--color-secondary);
     color: var(--color-font-2);
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .page-header > div {
