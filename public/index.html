@@ -4,64 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/chart.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>UCLL Meetstations</title>
+    <title>Home</title>
 </head>
 <body>
-    <div class="page">
-        <header class="page-header">
-            <div>
-                <h2>UCLL Meetstations</h2>
-                <label for="page-nav-toggle-checkbox" class="page-nav-toggle-label">☰</label>
+    <header>
+        <div>
+            <h1>UCLL</h1>
+            <label for="nav-toggle-checkbox" id="nav-toggle-label">☰</label>
+        </div>
+        <input type="checkbox" id="nav-toggle-checkbox">         
+        <nav>
+            <a href="/">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>       
+        <section>
+            <header>
+                <h2>Al de stations</h2>
+                <button>lijst</button>
+            </header>
+            <div class="Tabel">
+                <table>
+                    <tr>
+                        <th>Weerstation ID</th>
+                        <th>Locatie Coordinaten</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Latitude: 50.87870224351123, Longitude: 4.699849529479012</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Latitude: 50.92838073572026, Longitude: 5.396747069771264</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Latitude: 51.130484168693656, Longitude: 3.9069838098835685</td>
+                    </tr>
+                </table>
             </div>
-            <input type="checkbox" id="page-nav-toggle-checkbox">         
-            <nav class="page-nav">
-                <a href="#">navigation link</a>
-                <a href="#">navigation link</a>
-            </nav>
-        </header>
-        <main>       
-            <section>
-                <h1>Id en locaties van weerstations</h1>
-                <div class="Tabel">
-                    <table>
-                        <tr>
-                            <th>Weerstation ID</th>
-                            <th>Locatie Coordinaten</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Latitude: 50.87870224351123, Longitude: 4.699849529479012</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Latitude: 50.92838073572026, Longitude: 5.396747069771264</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Latitude: 51.130484168693656, Longitude: 3.9069838098835685</td>
-                        </tr>
-                    </table>
+        </section>            
+        <section>
+            <header>
+                <h2>Data geselecteerde stations</h2>
+            </header>
+            <div class="list">
+                <div class="chart">
+                    <canvas id="temperature-chart"></canvas>
                 </div>
-            </section>            
-            <section>                
-                <h1>Sensor data van de afgelopen 24 uur</h1>
-                <div class="list">
-                    <div class="chart">
-                        <canvas id="temperature-chart"></canvas>
-                    </div>
-                    <div class="chart">
-                        <canvas id="windspeed-chart"></canvas>
-                    </div>
+                <div class="chart">
+                    <canvas id="windspeed-chart"></canvas>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <h2>footer</h2>
-        </footer>
-    </div>
+            </div>
+        </section>
+        <div class="back-to-top">
+            <a href="#">naar boven</a>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Contact</a>
+        </nav>
+    </footer>
 </body>
 <script src="javascript/chart.js"></script>
 </html>
