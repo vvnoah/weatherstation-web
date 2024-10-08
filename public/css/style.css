@@ -121,23 +121,3 @@ footer {
     background-color: var(--color-secondary);
     color: var(--color-font-2);
 }
-
-.list {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 20px;
-}
-
-@media (min-width: 768px) {
-    .list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.chart {
-    display: flex;
-    justify-content: center;
-    min-width: 220px;
-    height: 100%;
-    box-shadow: 2px 2px 5px 5px gray;
-}
