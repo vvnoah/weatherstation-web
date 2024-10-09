@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive-list.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/test_map.css" />
+
     <title>Home</title>
 </head>
 <body>
@@ -40,6 +42,10 @@
                     </tr>
                 </table>
             </div>
+            <h1>Mijn Leaflet Kaart</h1>
+            <div class="kaart">
+                <div id="map"></div>
+            </div>
         </section>
         <section id="section-selected-data">
             <header>
@@ -69,4 +75,10 @@
 </body>
 <script src="js/main.js"></script>
 <script src="js/charts.js"></script>
+
+<script src="javascript/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="javascript/test_map.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 </html>
