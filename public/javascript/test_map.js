@@ -2,11 +2,11 @@
 var map = L.map('map').setView([51.1000, 4.4517], 8);
 
 // Voeg een basislaag toe
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+/*L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
-
+*/
 fetch('flanders.geojson')
     .then(response => response.json())
     .then(data => {
@@ -50,6 +50,15 @@ function addMarkers() {
 
 }
 
+/*
+var div = L.DomUtil.get('map');
+if (!L.Browser.touch) {
+    L.DomEvent.disableClickPropagation(div);
+    L.DomEvent.on(div, 'mousewheel', L.DomEvent.stopPropagation);
+} else {
+    L.DomEvent.on(div, 'click', L.DomEvent.stopPropagation);
+}
+*/
 // // Stap 2: Voeg een SVG-element toe aan de Leaflet-kaart voor D3
 // var svgLayer = L.svg().addTo(map);
 
