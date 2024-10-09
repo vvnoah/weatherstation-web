@@ -98,3 +98,7 @@ table, th, td {
     justify-content: space-around;
     overflow-x: auto;
 }
+
+.hide {
+    display: none;
+}

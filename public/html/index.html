@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive-list.css">
+    <link rel="stylesheet" href="css/map.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/test_map.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -32,12 +33,16 @@
     <main>       
         <section>
             <header>
-                <h2>Al de stations</h2>
+                <h2>De stations</h2>
                 <select name="list-or-map" id="list-or-map-select">
+                    <option value="map">kaart</option>
                     <option value="list">lijst</option>
                 </select>
             </header>
-            <div class="container-scroll-x">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+            <div class="container-scroll-x hide">
                 <table id="table">
                     <tr>
                         <th></th>
@@ -45,11 +50,7 @@
                         <th>Locatie</th>
                     </tr>
                 </table>
-            </div>
-            <h1>Mijn Leaflet Kaart</h1>
-            <div class="kaart">
-                <div id="map"></div>
-            </div>
+            </div>            
         </section>
         <section id="section-selected-data">
             <header>

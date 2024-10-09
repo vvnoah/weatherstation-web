@@ -1,5 +1,20 @@
-let selected = [];
+document.getElementById('list-or-map-select').addEventListener('change', function() {
+    const selectedValue = this.value;
+    const mapElement = document.querySelector('#map');
+    const listElement = document.querySelector('.container-scroll-x');
+    
+    if (selectedValue === 'map') {
+        console.log('map');
+        mapElement.classList.remove('hide');
+        listElement.classList.add('hide');
+    } else if (selectedValue === 'list') {
+        console.log('list');
+        mapElement.classList.add('hide');
+        listElement.classList.remove('hide');
+    }
+});
 
+let selected = [];
 fetch_data().then(data => {    
     let temperature_chart = create_line_chart("temperature-chart", "Temperatuur (°C)");
     let windspeed_chart = create_line_chart("windspeed-chart", "Windsnelheid (km/u)");
