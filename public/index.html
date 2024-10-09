@@ -32,29 +32,16 @@
                 </select>
             </header>
             <div class="container-scroll-x">
-                <table>
+                <table id="table">
                     <tr>
                         <th></th>
                         <th>Id</th>
-                        <th colspan="2">Locatie (lat, long)</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="selected">
-                        </td>
-                        <td>1</td>
-                        <td>50.87870224351123</td>
-                        <td>4.699849529479012</td>
+                        <th>Locatie</th>
                     </tr>
                 </table>
             </div>
         </section>
-        <section>
-            <header>
-                <h2>Geselecteerde stations</h2>
-            </header>
-        </section>      
-        <section>
+        <section id="section-selected-data">
             <header>
                 <h2>Data geselecteerde stations</h2>
             </header>
@@ -80,5 +67,6 @@
         </nav>
     </footer>
 </body>
-<script src="javascript/chart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/charts.js"></script>
 </html>
