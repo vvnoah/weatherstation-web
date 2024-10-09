@@ -1,16 +1,22 @@
-// Stap 1: Creëer de Leaflet-kaart
+//Creëer Leaflet-kaart
 var map = L.map('map').setView([51.1000, 4.4517], 8);
 
-// Voeg een basislaag toe
+//basislaag 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
+async function fetch_data() {
+    const response = await fetch('/api/station/1');
+    const data = await response.json();
+    //console.log(data); 
+    return data;
+}
+
 fetch('flanders.geojson')
     .then(response => response.json())
     .then(data => {
-
         L.geoJSON(data, {
             style: function (feature) {
                 return {
@@ -20,35 +26,57 @@ fetch('flanders.geojson')
                 };
             },
             pointToLayer: function (feature, latlng) {
-                return null; // Dit voorkomt dat er markers worden weergegeven
-
+                return null;
             }
         }).addTo(map);
 
-        addMarkers();
+        // Fetch station data na GeoJSON
+        fetch_data().then(data => {
+            addMarkers(data.stations);
+        });
     })
     .catch(error => console.error('Error loading the geoJSON file:', error));
 
-function addMarkers() {
-    var marker1 = L.circleMarker([50.9304, 5.3372], {
-        radius: 10,
-        color: "#ff0000",
-        fillColor: "#ff0000",
-        fillOpacity: 0.5
-    }).addTo(map);
+// function addMarkers() {
+//     var marker1 = L.circleMarker([50.9304, 5.3372], {
+//         radius: 10,
+//         color: "#ff0000",
+//         fillColor: "#ff0000",
+//         fillOpacity: 0.5
+//     }).addTo(map);
 
-    marker1.bindPopup('<b>Hasselt!</b><br>Welkom in Hasselt.');
+//     marker1.bindPopup('<b>Hasselt!</b><br>Welkom in Hasselt.');
 
-    var marker2 = L.circleMarker([51.2194, 4.4025], {
-        radius: 10,
-        color: "#ff0000",
-        fillColor: "#ff0000",
-        fillOpacity: 0.5
-    }).addTo(map);
+//     var marker2 = L.circleMarker([51.2194, 4.4025], {
+//         radius: 10,
+//         color: "#ff0000",
+//         fillColor: "#ff0000",
+//         fillOpacity: 0.5
+//     }).addTo(map);
 
-    marker2.bindPopup('<b>Antwerpen!</b><br>Welkom in Antwerpen.');
+//     marker2.bindPopup('<b>Antwerpen!</b><br>Welkom in Antwerpen.');
 
+// }
+
+
+function addMarkers(stations) {
+    stations.forEach(station => {
+        var marker = L.circleMarker(station.coordinates, {
+            radius: 10,
+            color: "#ff0000",
+            fillColor: "#ff0000",
+            fillOpacity: 0.5,
+
+        }).addTo(map);
+
+        marker.bindPopup(`<b>${station.name}</b><br>Coordinaten: ${station.coordinates[0]}, ${station.coordinates[1]}`);
+    });
 }
+
+fetch_data().then(data => {
+    addMarkers(data.stations);
+});
+
 
 // // Stap 2: Voeg een SVG-element toe aan de Leaflet-kaart voor D3
 // var svgLayer = L.svg().addTo(map);

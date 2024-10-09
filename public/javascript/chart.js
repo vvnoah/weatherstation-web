@@ -1,6 +1,7 @@
 async function fetch_data() {
     const response = await fetch('/api/station/1');
     const data = await response.json();
+    //console.log(data);
     return data;
 }
 

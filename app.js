@@ -55,6 +55,18 @@ const station_data = {
         { x: "21:00", y: 25.0 },
         { x: "22:00", y: 25.0 },
         { x: "23:00", y: 28.0 }
+    ],
+    stations: [
+        { id: 1, name: "Weather Station Hasselt", coordinates: [50.9304, 5.3372] },
+        { id: 2, name: "Weather Station Antwerpen", coordinates: [51.2194, 4.4025] },
+        { id: 3, name: "Weather Station Ghent", coordinates: [51.0543, 3.7174] },
+        { id: 4, name: "Weather Station Bruges", coordinates: [51.2093, 3.2247] },
+        { id: 5, name: "Weather Station Leuven", coordinates: [50.8798, 4.7005] },
+        { id: 6, name: "Weather Station Kortrijk", coordinates: [50.8262, 3.2649] },
+        { id: 7, name: "Weather Station Mechelen", coordinates: [51.0257, 4.4777] },
+        { id: 8, name: "Weather Station Sint-Niklaas", coordinates: [51.1656, 4.1431] },
+        { id: 9, name: "Weather Station Oostende", coordinates: [51.2153, 2.9282] },
+        { id: 10, name: "Weather Station Aalst", coordinates: [50.9360, 4.0355] }
     ]
 };
 
