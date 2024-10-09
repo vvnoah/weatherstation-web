@@ -1,9 +1,4 @@
-.responsive-navbar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 2000;
-    
+.responsive-navbar {    
     width: 100%;
 
     display: flex;
@@ -14,6 +9,13 @@
     padding-bottom: 5px;
     
     color: var(--color-font-2);
+}
+
+.stick-to-top {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2000;
 }
 
 @media (min-width: 600px) {
