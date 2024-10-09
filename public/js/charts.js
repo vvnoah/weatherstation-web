@@ -1,8 +1,8 @@
-function render_line_chart(chart_element_id, chart_title, chart_datasets) {
+function create_line_chart(chart_element_id, chart_title) {
   const config = {
     type: 'line',
     data: {
-      datasets: chart_datasets
+      datasets: []
     },
     options: {
       maintainAspectRatio: false,
@@ -24,4 +24,6 @@ function render_line_chart(chart_element_id, chart_title, chart_datasets) {
     document.getElementById(chart_element_id),
     config
   );
+
+  return chart;
 }
