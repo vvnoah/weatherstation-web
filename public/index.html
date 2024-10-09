@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive-list.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/test_map.css" />
+
     <title>Home</title>
 </head>
 <body>
@@ -48,46 +50,10 @@
                     </tr>
                 </table>
             </div>
-<<<<<<< HEAD
-            <input type="checkbox" id="page-nav-toggle-checkbox">         
-            <nav class="page-nav">
-                <a href="#">navigation link</a>
-                <a href="#">navigation link</a>
-            </nav>
-        </header>
-        <main>       
-            <h1>Id en locaties van weerstationnen</h1>
-            <div class="Tabel">
-                <table>
-                    <tr>
-                        <th>Weerstation ID</th>
-                        <th>Locatie Coordinaten</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Latitude: 50.87870224351123, Longitude: 4.699849529479012</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Latitude: 50.92838073572026, Longitude: 5.396747069771264</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Latitude: 51.130484168693656, Longitude: 3.9069838098835685</td>
-                    </tr>
-                </table>
+            <h1>Mijn Leaflet Kaart</h1>
+            <div class="kaart">
+                <div id="map"></div>
             </div>
-            
-            <section>                
-                <h1>Sensor data van de afgelopen 24 uur</h1>
-                <div class="list">
-                    <div class="chart">
-                        <canvas id="temperature-chart"></canvas>
-                    </div>
-                    <div class="chart">
-                        <canvas id="windspeed-chart"></canvas>
-                    </div>
-=======
         </section>
         <section>
             <header>
@@ -104,7 +70,6 @@
                 </div>
                 <div class="responsive-list-item">
                     <canvas id="windspeed-chart"></canvas>
->>>>>>> 4db8c8447198a101f5ea98c7ac2765b81edbda7a
                 </div>
             </div>
         </section>
@@ -121,5 +86,10 @@
         </nav>
     </footer>
 </body>
+
 <script src="javascript/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="javascript/test_map.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
 </html>
