@@ -8,13 +8,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 async function fetch_data() {
-    const response = await fetch('/api/station/1');
+    const response = await fetch('/api/stations');
     const data = await response.json();
     //console.log(data); 
     return data;
 }
 
-fetch('flanders.geojson')
+fetch('data/flanders.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
