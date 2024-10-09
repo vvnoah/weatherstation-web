@@ -1,0 +1,100 @@
+:root {
+    --color-primary: white;
+    --color-secondary: rgb(224, 0, 73);
+
+    --color-font-1: rgb(63, 63, 63);
+    --color-font-2: rgb(230, 230, 230);
+
+    --spacing-inline-sm: 10px;
+    --spacing-section: 20px;
+}
+
+body {
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 300px;
+    max-width: 1200px;
+
+    min-height: 100svh;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    color: var(--color-font-1);
+}
+
+main {
+    flex-grow: 1;
+    background-color: var(--color-font-2);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: var(--spacing-inline-sm);    
+    padding-top: var(--spacing-section);
+}
+
+section > header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.back-to-top {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+
+    padding-inline: var(--spacing-inline-sm);
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-align: right;
+    font-weight: bold;
+
+    background-color: var(--color-secondary);
+}
+
+.back-to-top a {
+    color: var(--color-font-2);
+}
+
+body > footer {
+    flex-shrink: 1;
+
+    padding-inline: var(--spacing-inline-sm);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: var(--color-secondary);
+}
+
+body > footer > nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+body > footer > nav > a {
+    font-weight: bold;
+    color: var(--color-font-2);
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+.container-scroll-x {
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+}
